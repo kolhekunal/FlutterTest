@@ -1,7 +1,8 @@
 
 
+import 'package:FlutterTest/utility/sizes.dart';
 import 'package:flutter/material.dart';
-import 'package:getinforme/utility/sizes.dart';
+
 
 
 import 'colors.dart';

@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:getinforme/data/data_helper.dart';
+
+import '../../data/data_helper.dart';
+
 
 
 part 'app_event.dart';

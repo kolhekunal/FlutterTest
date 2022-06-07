@@ -1,14 +1,14 @@
-class SignupModel {
+class PilotPostModel {
   int? status;
   String? msg;
-  SignupData? data;
+  Data? data;
 
-  SignupModel({this.status, this.msg, this.data});
+  PilotPostModel({this.status, this.msg, this.data});
 
-  SignupModel.fromJson(Map<String, dynamic> json) {
+  PilotPostModel.fromJson(Map<String, dynamic> json) {
     status = json['status'];
     msg = json['msg'];
-    data = json['data'] != null ? new SignupData.fromJson(json['data']) : null;
+    data = json['data'] != null ? new Data.fromJson(json['data']) : null;
   }
 
   Map<String, dynamic> toJson() {
@@ -22,21 +22,18 @@ class SignupModel {
   }
 }
 
-class SignupData {
-  int? userId;
-  int? otp;
+class Data {
+  int? postId;
 
-  SignupData({this.userId, this.otp});
+  Data({this.postId});
 
-  SignupData.fromJson(Map<String, dynamic> json) {
-    userId = json['user_id'];
-    otp = json['otp'];
+  Data.fromJson(Map<String, dynamic> json) {
+    postId = json['post_id'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['user_id'] = this.userId;
-    data['otp'] = this.otp;
+    data['post_id'] = this.postId;
     return data;
   }
 }

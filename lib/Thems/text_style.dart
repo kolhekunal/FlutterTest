@@ -1,7 +1,8 @@
+import 'package:FlutterTest/Thems/Responsive.dart';
 import 'package:flutter/material.dart';
-import 'package:getinforme/Thems/Responsive.dart';
-import 'package:getinforme/Thems/color_palette.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'color_palette.dart';
 
 
 

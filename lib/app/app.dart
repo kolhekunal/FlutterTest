@@ -5,7 +5,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
-import 'package:getinforme/core/routes.dart' as _router;
+import 'package:FlutterTest/core/routes.dart' as _router;
 import '../Thems/Responsive.dart';
 import '../Thems/app_theme.dart';
 import '../core/routes.dart';
@@ -23,8 +23,6 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
- // FirebaseMessaging messaging =  FirebaseMessaging.instance;
-
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -39,27 +37,9 @@ class _AppState extends State<App> {
   void initState() {
     // TODO: implement initState
     super.initState();
-   /* FlutterLocalNotification.initialize(context);
-    messaging = FirebaseMessaging.instance;
-    messaging.getToken().then((value) async {
-      print(value);
-      //   final prefs = await SharedPreferences.getInstance();
-      //    prefs.setString(SharedPref.PrefrenceKey.FCM_TOKEN, value);
-    });
 
-    if (Platform.isAndroid) {
-      // dynamic iosSubscription = messaging.onIosSettingsRegistered.listen((data) {});
-      messaging.requestPermission(
-        alert: true,
-        announcement: false,
-        badge: true,
-        carPlay: false,
-        criticalAlert: false,
-        provisional: false,
-        sound: true,
-      );
-    }*/
   }
+
 }
 
 class AppLanding extends StatefulWidget {
@@ -97,28 +77,4 @@ class _AppLandingState extends State<AppLanding> {
     super.dispose();
   }
 
-/*  void _messageHandler(){
-
-    //App is in Terminated state
-    FirebaseMessaging.instance.getInitialMessage().then((message){
-
-    });
-
-
-// App is in foreground state
-    FirebaseMessaging.onMessage.listen((message) {
-      if(message.notification!=null) {
-        FlutterLocalNotification.display(message);
-      }
-    });
-
-    //When App is in background state but not Terminated
-    FirebaseMessaging.onMessageOpenedApp.listen((message) {
-      print('messageCome');
-      print(message.data.toString());
-      print(message.notification);
-      print(message.notification.toString());
-    });
-
-  }*/
 }
